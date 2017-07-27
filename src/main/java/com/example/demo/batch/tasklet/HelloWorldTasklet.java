@@ -1,4 +1,4 @@
-package com.starwars.batch.tasklet;
+package com.example.demo.batch.tasklet;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.StepContribution;
@@ -7,14 +7,13 @@ import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.stereotype.Component;
 
-@Slf4j
 @Component
-public class HellowWorldTasklet implements Tasklet{
+@Slf4j
+public class HelloWorldTasklet implements Tasklet{
+    @Override
+    public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception {
 
-  @Override
-  public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception {
-    log.info("Hello World");
-
-    return RepeatStatus.FINISHED;
-  }
+        log.info("Hello World");
+        return RepeatStatus.FINISHED;
+    }
 }

@@ -1,12 +1,12 @@
-package com.starwars.batch;
+package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StarwarsBatchApplication {
+public class  StarWarsBatchApplication{
 
 	public static void main(String[] args) {
-		SpringApplication.run(StarwarsBatchApplication.class, args);
+		SpringApplication.run(StarWarsBatchApplication.class, args);
 	}
 }
